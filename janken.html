@@ -9,6 +9,8 @@
 </head>
 
 <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="sound.js"></script>
   <header>
     <h1>じゃんけん</h1>
   </header>
@@ -24,7 +26,11 @@
   <main>
     <ul>
       <li data-rps="rock" class="rps-hand">
-          <p>グー</p>
+          <p class="btn"><a onclick="sound()">グー</a></p>
+          <audio id="sound" preload="auto">
+            <source src="/sound_01.mp3" type="mp3">
+            <source src="/sound_01.wav" type="wav">
+          </audio>
           <img src="img/tokage.jpg" alt="">
       </li>
       <li data-rps="scissors" class="rps-hand">
@@ -45,16 +51,8 @@
     
   </main>
 
-  
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
-    //ここに処理を追加
-
- 
-  $(function () {
-
-      // プレイヤーとコンピューターの勝利数を初期化
+       // プレイヤーとコンピューターの勝利数を初期化
       var PointCom = 0, PointMe = 0;
 
       // 次のコンピュータの手を返す。
@@ -118,11 +116,7 @@
           $('#point_me').text(++PointMe);
         else if (judge == -1)
           $('#point_com').text(++PointCom);
-      });
     });
-
   </script>
-
 </body>
-
 </html>
