@@ -10,7 +10,7 @@
 
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="sound.js"></script>
+  
   <header>
     <h1>じゃんけん</h1>
   </header>
@@ -25,19 +25,16 @@
 
   <main>
     <ul>
-      <li data-rps="rock" class="rps-hand">
-          <p class="btn"><a onclick="sound()">グー</a></p>
-          <audio id="sound" preload="auto">
-            <source src="/sound_01.mp3" type="mp3">
-            <source src="/sound_01.wav" type="wav">
-          </audio>
-          <img src="img/tokage.jpg" alt="">
+      <li data-rps="rock" id="play-btn01" class="rps-hand">
+        <p class="btn">グー</p>
+        <!-- <button class="btns" id="play-btn">play</button> -->
+        <img src="img/tokage.jpg" alt="">
       </li>
-      <li data-rps="scissors" class="rps-hand">
+      <li data-rps="scissors" id="play-btn02" class="rps-hand">
         <p>チョキ</p>
         <img src="img/neko.jpg" alt="">
       </li>
-      <li data-rps="paper" class="rps-hand">
+      <li data-rps="paper" id="play-btn03" class="rps-hand">
         <p>パー</p>
         <img src="img/pengin.jpg" alt="">
         </li>
@@ -50,6 +47,7 @@
     <div id="Point02">あなたの得点は：<span id="point_me">0</span></div>
     
   </main>
+<script src="sound.js"></script>
 
   <script>
        // プレイヤーとコンピューターの勝利数を初期化
@@ -118,5 +116,6 @@
           $('#point_com').text(++PointCom);
     });
   </script>
+
 </body>
 </html>
