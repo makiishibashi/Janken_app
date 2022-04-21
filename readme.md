@@ -1,5 +1,5 @@
 # じゃんけんアプリ
-  [https://github.com/makiishibashi/Janken_app](https://github.com/makiishibashi/Janken_app)
+  [https://makiishibashi.github.io/Janken_app/](https://makiishibashi.github.io/Janken_app/)
 ## JSで動くじゃんけんアプリ
 # 苦労したところ
 - じゃんけんのボタン押下で効果音が出るようになるまで2日かかった。
